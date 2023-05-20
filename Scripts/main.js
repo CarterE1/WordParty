@@ -10,14 +10,13 @@ var timeLeft = 30;
 document.getElementById('timer').innerText = timeLeft;
 var timer = window.setInterval(everySecond, 1000);
 
-
 setNewCombo()
 
-fetch('https://github.com/CarterE1/WordParty/blob/main/Files/words.txt').then((response) => response.text()).then(repo => {
+fetch('../Files/words.txt').then((response) => response.text()).then(repo => {
     arrayOfLines = repo.split('\n');
 })
 
-fetch('https://github.com/CarterE1/WordParty/blob/main/Files/combos.txt').then((response) => response.text()).then(repo => {
+fetch('../Files/combos.txt').then((response) => response.text()).then(repo => {
     arrayOfCombos = repo.split('\n');
 })
 
@@ -36,9 +35,11 @@ function setNewCombo() {
 }
 
 function checkWord(word) {
+    console.log(arrayOfLines.includes("all"))
     text = document.getElementById('textInput');
     if (word.indexOf(currentCombo.trim()) > -1) {
         if (arrayOfLines.includes(word) && !arrayOfUsedWords.includes(word)) {
+            console.log("test")
             setNewCombo()
             text.style.borderColor = '#afafaf';
             arrayOfUsedWords.push(word)

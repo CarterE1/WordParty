@@ -50,6 +50,9 @@ function checkWord(word) {
             } else {
                 timeLeft += 20;
             }
+            if (timeLeft > 100) {
+                timeLeft = 100;
+            }
             document.getElementById("timer").innerText = timeLeft;
         } else {
             text.style.borderColor = '#afafaf';

@@ -12,11 +12,11 @@ var timer = window.setInterval(everySecond, 1000);
 
 setNewCombo()
 
-await fetch('../main/files/words.txt').then((response) => response.text()).then(repo => {
+fetch('../Files/words.txt').then((response) => response.text()).then(repo => {
     arrayOfLines = repo.split('\n');
 })
 
-await fetch('../Files/combos.txt').then((response) => response.text()).then(repo => {
+fetch('../Files/combos.txt').then((response) => response.text()).then(repo => {
     arrayOfCombos = repo.split('\n');
 })
 

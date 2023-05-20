@@ -31,7 +31,7 @@ text.addEventListener('keyup', function onEvent(e) {
 });
 
 function setNewCombo() {
-    setTimeout(() => { currentCombo = arrayOfCombos[(Math.random() * arrayOfCombos.length) | 0]; document.getElementById('curCombo').innerText = /*"Current combo: " +*/ currentCombo }, 50);
+    setTimeout(() => { currentCombo = arrayOfCombos[(Math.random() * arrayOfCombos.length) | 0]; document.getElementById('curCombo').innerText = /*"Current combo: " +*/ currentCombo }, 500);
 }
 
 function checkWord(word) {

@@ -12,7 +12,7 @@ var timer = window.setInterval(everySecond, 1000);
 
 setNewCombo()
 
-fetch('Files/words.txt').then((response) => response.text()).then(repo => {
+fetch('https://github.com/CarterE1/WordParty/blob/3f5ba0202e487dc126ff467673ddd6d791dc56e5/Files/words.txt').then((response) => response.text()).then(repo => {
     arrayOfLines = repo.split('\n');
 })
 

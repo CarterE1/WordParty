@@ -12,11 +12,11 @@ var timer = window.setInterval(everySecond, 1000);
 
 setNewCombo()
 
-fetch('https://github.com/CarterE1/WordParty/blob/3f5ba0202e487dc126ff467673ddd6d791dc56e5/Files/words.txt').then((response) => response.text()).then(repo => {
+fetch('WordParty/Files/words.txt).then((response) => response.text()).then(repo => {
     arrayOfLines = repo.split('\n');
 })
 
-fetch('https://github.com/CarterE1/WordParty/blob/62cd2bdd7df889176ca7113d04bde60544b82752/Files/combos.txt').then((response) => response.text()).then(repo => {
+fetch('WordParty/Files/combos.txt').then((response) => response.text()).then(repo => {
     arrayOfCombos = repo.split('\n');
 })
 

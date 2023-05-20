@@ -16,7 +16,7 @@ fetch('../Files/words.txt').then((response) => response.text()).then(repo => {
     arrayOfLines = repo.split('\n');
 })
 
-fetch('../CarterE1/WordParty/blob/main/Files/combos.txt').then((response) => response.text()).then(repo => {
+fetch('https://raw.githubusercontent.com/CarterE1/WordParty/main/Files/words.txt').then((response) => response.text()).then(repo => {
     arrayOfCombos = repo.split('\n');
 })
 
